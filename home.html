@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html
+  lang="ar"
+  dir="rtl"
+  perfix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book# profile: http://ogp.me/ns/profile# video: http://ogp.me/ns/video# product: http://ogp.me/ns/product# content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title></title>
+  </head>
+  <body>
+    <form name="form1" onsubmit="check(event.preventDefault())">
+      <header class="block-header">
+        <div class="logo"><img src="/pic/logo-svu.png" /></div>
+      </header>
+      <div class="block-body">
+        <div class="add-recust">
+          <div class="title"><h1>اضافة طالب</h1></div>
+          <div class="contint">
+            <div class="contint-input">
+              <label for="Id-studint">اسم المستخدم </label>
+              <input
+                id="Id-studint"
+                placeholder="Ahmad_123123"
+                type="text"
+                name="txt1"
+                onchange="CheckEnglishOnly(this);"
+                onkeypress="CheckEnglishOnly(this);"
+                onkeyup="CheckEnglishOnly(this);"
+                onpaste="CheckEnglishOnly(this);"
+                required
+              />
+            </div>
+            <div class="contint-input">
+              <label for="studint-name">اسم الطالب </label>
+              <input
+                id="studint-name"
+                placeholder="احمد جويد"
+                type="text"
+                name="txt2"
+                onchange="CheckArabicOnly(this);"
+                onkeypress="CheckArabicOnly(this);"
+                onkeyup="CheckArabicOnly(this);"
+                onpaste="CheckArabicOnly(this);"
+              />
+            </div>
+            <div class="contint-input">
+              <label for="berthdate">تاريخ الولادة </label>
+              <input id="berthdate" max="2004/12/12" type="date" name="txt3" />
+            </div>
+            <div class="contint-input" style="margin-bottom: 25px">
+              <label for="programA" class="label-program">البرنامج </label>
+              <select id="programA">
+                <option value="1">BAIT</option>
+                <option value="2">ITE</option>
+                <option value="3">BIT</option>
+                <option value="4">BACT</option>
+              </select>
+            </div>
+
+            <div class="contint-input">
+              <label for="phone-number">رقم الهاتف </label>
+              <input
+                id="phone-number"
+                placeholder="+963-934-567-819"
+                type="number"
+                name="txt4"
+                pattern="[+963]{4}-[0-9]{3}-[0-9]{3}-[0-9]{3}"
+                required
+              />
+              <big>Format: +963-934-836-831</big>
+            </div>
+            <br />
+            <div class="cont">
+              <label for="exampleInputEmail1" class="form-label">Captcha</label>
+              <div class="captcha">
+                <div class="captcha1" id="captchaValue"></div>
+                <input
+                  type="text"
+                  name="captcha_code"
+                  class="form-control"
+                  id="captcha_code"
+                />
+              </div>
+              <a id="new_captcha" href="javascript:;">New Captcha</a>
+              <br />
+              <div>
+                <input
+                  type="submit"
+                  style="margin-bottom: 5px; cursor: pointer"
+                />
+              </div>
+              <input type="reset" style="margin-bottom: 5px; cursor: pointer" />
+            </div>
+          </div>
+        </div>
+        <div class="add-recust2">
+          <div class="title"><h1>جدول بأسماء الطلاب</h1></div>
+          <div class="input-tabel">
+            <div class="contint-input">
+              <label for="sProgram" class="label-program">البرنامج </label>
+              <select onchange="selectedProgram()" id="sProgram">
+                <option value="5">ALL</option>
+                <option value="1">BAIT</option>
+                <option value="2">ITE</option>
+                <option value="3">BIT</option>
+                <option value="4">BACT</option>
+              </select>
+              <br />
+              <div class="radioInput">
+                <label for="sort">فرز</label>
+                <input type="radio" name="sortV" value="No"onchange="Sort()"/>رقم المستخدم
+                <input type="radio" name="sortV" value="Name"onchange="Sort()"/>اسم الطالب
+                <input type="radio" name="sortV" value="Program"onchange="Sort()"/>البرنامج
+              </div>
+            </div>
+          </div>
+          <div class="contint-tabel">
+            <table class="table table-striped">
+              <tr class="bg-info">
+                <th>متسلسل</th>
+                <th>اسم المستخدم</th>
+                <th>اسم الطالب</th>
+                <th>البرنامج</th>
+              </tr>
+
+              <tbody id="myTable"></tbody>
+            </table>
+          </div>
+          <button type="button" onclick="convert()">Convet to JSON</button>
+          <textarea readonly id="mytextarea" cols="70" rows="30"></textarea>
+        </div>
+      </div>
+      <footer class="block-footer"></footer>
+    </form>
+    <script src="js.js"></script>
+  </body>
+</html>

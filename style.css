@@ -1,0 +1,160 @@
+html{
+    margin:-10px;
+}
+.logo{
+    display: inline;
+}
+.logo img{
+    height: 70px;
+}
+body {
+    background-image:url(pic/back.jpg);
+    /* background-size:100% 100%;
+    background-repeat: no-repeat; */
+}
+.block-header{
+    height: 75px;
+    background-color:rgba(0, 0, 0, 0.726)
+}
+.add-recust{
+    margin: 0% 30%;
+    background-color: #747474b3;
+    height: 890px;
+    border-radius:10px;
+    box-shadow: 0px 0px 20px 8px rgb(220 220 220);
+}
+.add-recust2{
+    margin: 0% 30%;
+    background-color: #747474b3;
+    height: 1000px;
+    border-radius:10px;
+    box-shadow: 0px 0px 20px 8px rgb(220 220 220);
+}
+.contint-input {
+    margin-right: 20% ;
+    font-size: 20px;
+    font-weight: 700;
+}
+.contint-input select{
+    font-size: 25px;
+}
+.radioInput{
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 20px;
+}
+input{
+    display:block;
+    border-radius:5px;
+    border:20px rgba(0, 0, 0, 0);
+    background-color:rgba(255, 255, 255, 0.805);
+    height: 30px;
+    width: 80%;
+    font-size: 20px;
+    margin: 15px 0;
+    /* cursor: alias; */
+}
+.cont 
+{
+    padding-right: 130px;
+}
+.cont a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+
+}
+.captcha1{
+    display: inline-block;
+    background-color: cornsilk;
+    font-weight: bold;
+    margin: 4px;
+    padding: 10px;
+    font-size: 34px;
+    letter-spacing: 14px;
+}
+.form-label{
+    text-transform: capitalize;
+    display: inline-block;
+    color: coral;
+    display: inline-flex !important;
+    background-color: burlywood;
+    text-align: center;
+    font-size: 30px;
+}
+label{
+    display: block;
+    margin:5px 10%;
+    font-size:20px;
+}
+h1{
+    text-align: -webkit-center;
+    padding-top: 50px;
+}
+.label-program{
+    display: inline-block;
+    margin-left:30%;
+}
+
+table{
+	/* width:  1000px; */
+	margin: 30px auto;
+    font-family: sans-serif;
+}
+
+table th{
+	padding: 10px 0;
+	background-color: #f4f4f4;
+	/* background-color: #fff; */
+	border:  thin solid #d4d4d4;
+}
+
+table td{
+	padding: 10px;
+	border:  thin solid #d4d4d4;
+	width: 18%;
+	text-align: center;
+	background-color: #fff;
+}
+
+table img{
+	width:  70%;
+}
+
+table td.total-price{
+	font-weight: bold;
+	font-size: 22px;
+    
+}
+table a{
+	text-decoration: none;
+	color: darkred;
+	background-color: #ffecef;
+	padding: 10px 15px;
+}
+table a:active{
+	background-color: #ccf4d6;
+	color:  green;
+}
+
+table select{
+	padding: 10px;
+	width:  200px;
+	font-size: 16px;
+	border: thin solid #d4d4d4;
+	background-color: transparent;
+}
+table select:focus{
+	outline: none;
+}
+button{
+    font-size: 18px;
+    float: left;
+    margin: 20px 20px 0 20px;
+}
+textarea{
+    margin: auto;
+    display: flex;
+}
